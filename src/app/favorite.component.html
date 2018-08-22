@@ -1,0 +1,13 @@
+<h1>Fav Comp</h1>
+
+ <ul class="nav nav-pills">
+     <li [class.active]="viewmode=='map'"><button (click)="viewMode='list'">Map</button></li>
+     <li [class.active]="viewmode=='list'"><button  (click)="viewMode='map'">List</button></li>
+ </ul>
+
+
+<div [ngSwitch]='viewMode'>
+    <div *ngSwitchCase="'map'">Map view</div>
+    <div *ngSwitchCase="'list'">List view</div>
+    
+</div>

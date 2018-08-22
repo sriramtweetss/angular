@@ -1,0 +1,13 @@
+<h4>Course Comp</h4>
+
+<ul> 
+
+<li *ngFor="let x of courses">{{x}}
+
+</li>
+
+</ul>
+<input type="text"[(ngModel)]="title" (keyup.enter)="typeFunc($event)"/>
+<button class="btn btn-primary" (click)="onclick($event)" [class.active]="isActive">Save</button>
+
+<p>{{sample | Summary:10}}</p>
